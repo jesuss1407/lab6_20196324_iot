@@ -36,7 +36,6 @@ public class Memory extends AppCompatActivity {
         startActivityForResult(chooseImageIntent, IMAGE_CHOOSE);
     }
 
-
     @SuppressLint("MissingInflatedId")
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -50,7 +49,6 @@ public class Memory extends AppCompatActivity {
         addImagesButton = findViewById(R.id.btnSelectImage);
         scrollView = findViewById(R.id.scrollView);
 
-
         addImagesButton.setOnClickListener(v -> {
             if (imageUris.size() < 15) {
                 chooseImage();
@@ -59,14 +57,14 @@ public class Memory extends AppCompatActivity {
             }
         });
 
-        btnBack = findViewById(R.id.btnVolver);
+
+        btnBack = findViewById(R.id.cerrarButton);
         btnBack.setOnClickListener(v -> {
             Intent intent = new Intent(Memory.this, MainActivity.class);
             startActivity(intent);
         });
 
     }
-
 
 
     @Override
@@ -88,6 +86,12 @@ public class Memory extends AppCompatActivity {
                 ViewGroup.LayoutParams.WRAP_CONTENT,
                 ViewGroup.LayoutParams.WRAP_CONTENT));
         imageView.setPadding(10, 10, 10, 10);
+        imageView.setOnLongClickListener(v -> {
+            imageContainer.removeView(imageView);
+            imageUris.remove(imageUri);
+            updateImageCount();
+            return true;
+        });
 
         imageContainer.addView(imageView);
         updateImageCount();
@@ -97,6 +101,7 @@ public class Memory extends AppCompatActivity {
     private void updateImageCount() {
         imageCountView.setText(String.format("Total de imagenes seleccionadas: %d", imageUris.size()));
     }
+
 
 
 }
