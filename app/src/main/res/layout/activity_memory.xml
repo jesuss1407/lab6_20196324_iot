@@ -1,0 +1,165 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical"
+    >
+
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="0dp"
+        android:layout_weight="1"
+        android:layout_marginTop="28dp"
+        android:orientation="vertical">
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="?attr/actionBarSize"
+            android:background="@color/white"
+            android:gravity="center"
+            android:orientation="vertical">
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="0dp"
+                android:text="MemoryGame"
+                android:textColor="@color/black"
+                android:textSize="42sp"
+                android:textStyle="bold" />
+            <ImageView
+                android:layout_marginTop="10dp"
+                android:layout_width="212dp"
+                android:layout_height="8dp"
+                android:src="@drawable/lineasup" />
+
+
+        </LinearLayout>
+
+        <ScrollView
+            android:paddingStart="10dp"
+            android:paddingEnd="10dp"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_weight="1"
+            tools:ignore="RtlSymmetry">
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="0dp"
+                android:layout_weight="1"
+                android:orientation="vertical"
+                android:paddingRight="26dp"
+                android:paddingLeft="26dp">
+
+                <TextView
+                    android:id="@+id/tvImageCount"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:textStyle="bold"
+                    android:textSize="16dp"
+                    android:text="Total de imágenes seleccionadas: 5"
+                    android:layout_marginTop="16dp"/>
+
+
+
+                <Button
+                    android:id="@+id/btnSelectImage"
+                    android:layout_width="200dp"
+                    android:layout_height="56dp"
+                    android:layout_marginTop="10dp"
+                    android:backgroundTint="@drawable/button_background_black"
+                    android:layout_gravity="center"
+                    android:text="Agregar imágenes"
+                    app:cornerRadius="8dp" />
+
+
+                <HorizontalScrollView
+                    android:id="@+id/scrollView"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="20dp">
+
+                    <LinearLayout
+                        android:id="@+id/imageContainer"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:orientation="horizontal"/>
+
+                </HorizontalScrollView>
+
+                <GridView
+                    android:id="@+id/gridViewMemory"
+                    android:layout_width="match_parent"
+                    android:layout_height="210dp"
+                    android:layout_marginTop="12dp"
+                    android:gravity="center"
+                    android:horizontalSpacing="2dp"
+                    android:numColumns="3"
+                    android:verticalSpacing="2dp" />
+
+                <Button
+                    android:id="@+id/btnReset"
+                    android:layout_width="200dp"
+                    android:layout_height="60dp"
+                    android:layout_gravity="center"
+                    android:backgroundTint="@drawable/button_background_blue"
+                    android:insetTop="8dp"
+                    android:text="Comenzar juego"
+                    android:layout_marginBottom="2dp"
+                    app:cornerRadius="8dp" />
+
+                <Button
+                    android:id="@+id/btnRandom"
+                    android:layout_width="200dp"
+                    android:layout_height="60dp"
+                    android:layout_gravity="center"
+                    android:backgroundTint="@drawable/button_background_blue"
+                    android:insetTop="8dp"
+                    android:text="Aleatorizar"
+                    android:layout_marginBottom="8dp"
+                    app:cornerRadius="8dp" />
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:orientation="horizontal"
+                    android:gravity="center">
+                    <Button
+                        android:layout_width="0dp"
+                        android:layout_height="60dp"
+                        android:layout_weight="1"
+                        android:id="@+id/btnHelp"
+                        android:text="Ayuda"
+                        android:textColor="@color/white"
+                        android:layout_marginStart="10dp"
+                        android:layout_marginEnd="5dp"
+                        android:backgroundTint="@drawable/button_background_black"
+                        app:cornerRadius="8dp" />
+
+                    <Button
+                        android:layout_width="0dp"
+                        android:layout_height="60dp"
+                        android:layout_weight="1"
+                        android:id="@+id/cerrarButton"
+                        android:text="Volver"
+                        android:textColor="@color/white"
+                        android:layout_marginStart="5dp"
+                        android:layout_marginEnd="10dp"
+                        android:backgroundTint="@drawable/button_background_green"
+                        app:cornerRadius="8dp" />
+
+                </LinearLayout>
+            </LinearLayout>
+
+        </ScrollView>
+
+
+
+    </LinearLayout>
+
+
+</LinearLayout>

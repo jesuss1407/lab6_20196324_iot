@@ -1,0 +1,100 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical"
+    >
+
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="0dp"
+        android:layout_weight="1"
+        android:layout_marginTop="28dp"
+        android:orientation="vertical">
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="?attr/actionBarSize"
+            android:background="@color/white"
+            android:gravity="center"
+            android:orientation="vertical">
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="0dp"
+                android:text="PuzzleGame"
+                android:textColor="@color/black"
+                android:textSize="42sp"
+                android:textStyle="bold" />
+            <ImageView
+                android:layout_marginTop="10dp"
+                android:layout_width="212dp"
+                android:layout_height="8dp"
+                android:src="@drawable/lineasup" />
+
+
+        </LinearLayout>
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="0dp"
+            android:layout_weight="1"
+            android:orientation="vertical"
+            android:paddingRight="26dp"
+            android:paddingTop="26dp"
+            android:paddingLeft="26dp">
+
+
+            <!-- Vista para mostrar el rompecabezas -->
+            <GridView
+                android:id="@+id/gridViewPuzzle"
+                android:layout_width="match_parent"
+                android:layout_height="299dp"
+                android:gravity="center"
+                android:horizontalSpacing="2dp"
+                android:numColumns="3"
+                android:verticalSpacing="2dp" />
+
+
+            <Button
+                android:id="@+id/btnSelectImage"
+                android:layout_width="200dp"
+                android:layout_height="56dp"
+                android:layout_marginTop="10dp"
+                android:backgroundTint="@drawable/button_background_black"
+                android:layout_gravity="center"
+                android:text="Escoger imagen"
+                app:cornerRadius="8dp" />
+
+
+            <Button
+                android:id="@+id/btnReset"
+                android:layout_width="200dp"
+                android:layout_height="60dp"
+                android:layout_gravity="center"
+                android:backgroundTint="@drawable/button_background_blue"
+                android:insetTop="8dp"
+                android:text="Comenzar"
+                android:layout_marginBottom="12dp"
+                app:cornerRadius="8dp" />
+
+            <Button
+                android:id="@+id/btnVolver"
+                android:layout_width="200dp"
+                android:layout_height="60dp"
+                android:layout_gravity="center"
+                android:backgroundTint="@drawable/button_background_green"
+                android:insetTop="8dp"
+                android:text="Volver"
+                android:layout_marginBottom="12dp"
+                app:cornerRadius="8dp" />
+        </LinearLayout>
+    </LinearLayout>
+
+
+</LinearLayout>
