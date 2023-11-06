@@ -49,6 +49,10 @@ public class Memory extends AppCompatActivity {
         addImagesButton = findViewById(R.id.btnSelectImage);
         scrollView = findViewById(R.id.scrollView);
 
+
+
+
+
         addImagesButton.setOnClickListener(v -> {
             if (imageUris.size() < 15) {
                 chooseImage();
